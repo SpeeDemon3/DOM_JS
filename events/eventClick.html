@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Click</title>
+</head>
+<body>
+
+    <h3>Event Click</h3>
+    
+    <br>
+
+    <div id="container">
+
+        <input type="text" name="text" id="text">
+        <input id="Send" type="submit" value="Send">    
+
+    </div>
+
+
+    <script type="text/Javascript">
+
+        // Obtengo el input de tipo submit
+        const inpSubmit = document.getElementById("Send");
+
+        // Obtengo el input de tipo text
+        let inpText = document.getElementById("text");
+
+        // Obtengo el contendor
+        const divContainer = document.getElementById("container");
+
+        function greet(name) {
+            
+            // Creo y guardo un elemento 'h3'
+            let p = document.createElement("p");
+
+            // Añado contenido al elemento
+            p.textContent = `Hello ${name}`;
+
+            // Lo inserto en el body
+            divContainer.appendChild(p);
+
+        }
+
+        // Añado el evento click y una funcion anonima
+        // donde dentro invoco a la funcion greet pasando el valor que contiene
+        // el input de tipo texto
+        inpSubmit.addEventListener("click", function(){
+            greet(inpText.value);
+        });
+
+
+
+    </script>
+
+</body>
+</html>
