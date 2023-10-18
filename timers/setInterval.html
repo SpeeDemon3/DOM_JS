@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+</head>
+<body>
+    
+    <h1 id="h1">SetInterval</h1>
+
+    <script>
+
+        // Hasta que no se haya cargado toda la pagina no 
+        // entrara en accion la funcion exampleSetInterval()
+        window.addEventListener("load", exampleSetInterval);
+
+        function exampleSetInterval() {
+
+            // Aunque no seria necesario, guardo en una variable lo que
+            // obtenga de llamar al metodo setInterval() y el tiempo(5000) en milisegundos
+            // en este caso se ejecutara cada 1 segundos
+            let time = setInterval(changeColor, 1000);
+
+        }
+
+        // Variable para rastrear el color actual
+        let isPink = true; 
+
+        function changeColor() {
+
+            // Obtengo la etiqueta h1
+            const h1 = document.getElementById("h1");
+
+
+            if(isPink) { // Si es true
+                    h1.style.color = "pink";
+                } else {
+                    h1.style.color = "blue";
+                }
+            
+                // Alternar el estado de 'isPink' para que de tiempo a mostrar los 2 colores
+                isPink = !isPink;
+
+        }
+        
+    </script>
+
+</body>
+</html>
