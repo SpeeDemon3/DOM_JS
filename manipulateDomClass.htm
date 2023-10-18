@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM elements by their class</title>
+</head>
+<body>
+    <h1>Manipulating DOM elements by their class</h1>
+
+    <br>
+
+    <ol>
+
+        <li class="c1">a</li>
+        <li>b</li>
+        <li>c</li>
+        <li class="c1">d</li>
+        <li>e</li>
+        <li>f</li>
+        <li class="c1">g</li>
+        <li>h</li>
+        <li>i</li>
+        <li class="c1">j</li>
+
+    </ol>
+
+    <script text="text/javascript">
+
+        // Obtengo todos los elementos li con la clase c1 utilizando la propiedad getElementsByClassName
+        const c1class = document.getElementsByClassName("c1");
+
+        let count = 1;
+
+        for (index in c1class) {
+
+            // Modifico el contenido asignando el resultado de multiplicar el indice por el contador
+            c1class[index].innerHTML = index * count;
+
+            // Modifico tambien el color
+            c1class[index].style.color = "red";
+
+            count++;
+
+        }
+
+    </script>
+
+    <script text="text/javascript">
+
+        // Obtengo todos los elementos li con la clase c1 utilizando la propiedad 
+
+
+    </script>
+
+</body>
+</html>
