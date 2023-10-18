@@ -9,6 +9,12 @@
 
     <h5 id="id-h5">Manipulating the DOM from functions</h5>
 
+    <ul>
+        <li class="class-li">Java</li>
+        <li class="class-li">JavaScript</li>
+        <li class="class-li">Python</li>
+    </ul>
+
     <script text="text/javascript">
         
         // Funcion para cambiar el color del texto de la etiqueta H5
@@ -25,6 +31,35 @@
         changeColor("green");
 
     </script>
+
+
+    <script text="text/javascript">
+
+        // Obtenemos todos los elementos 'li' ahora utilizando getElementsByTagName 
+        const liElements = document.getElementsByTagName("li");
+
+        console.log(liElements); // Compruebo lo obtenido por consola
+
+        function manipulateElementsLi(color) {
+            
+            // Recorremos el array que obtenemos con los elementos 'li'
+            for (index in liElements) {
+
+                // Cambiamos el color de los elementos 'li'
+                liElements[index].style.color = "blue";
+
+                // Cambiamos el contenido de las etiquetas por el numero del indice
+                liElements[index].innerHTML = index;
+
+            }
+
+
+        }
+
+        manipulateElementsLi("blue");
+
+    </script>
+
     
 </body>
 </html>
