@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular el DOM desde JS</title>
+</head>
+<body>
+    
+    <h3 id="header-h3">"HEADER DOM"</h3>
+
+    <script type="text/javascript">
+
+        // Obtenemos el valor que tiene dentro la etiqueta H3 utilizando el id(identificador)
+        let h3 = document.getElementById("header-h3");
+
+        console.log(h3); // Imprimimos el valor por consola
+
+        // Cambiamos el valor
+        h3.innerHTML = "I am changing value from JavaScript";
+
+    </script>
+
+</body>
+</html>
