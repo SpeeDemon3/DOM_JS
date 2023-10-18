@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h3>Event Click</h3>
+    <h3 id="h3">Event Click</h3>
     
     <br>
 
@@ -49,6 +49,22 @@
         inpSubmit.addEventListener("click", function(){
             greet(inpText.value);
         });
+
+                    
+        // Obtengo el elemento h3
+        const h3 = document.getElementById("h3");
+
+        // Funcion para cambiar el color del elemento h3
+        function changeColor() {
+
+            // Cambio el color del background
+            h3.style.background = "pink";
+
+        }
+
+        h3.addEventListener("click", function() {
+            changeColor();
+        })
 
 
 
