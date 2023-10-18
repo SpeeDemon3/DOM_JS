@@ -11,11 +11,26 @@
     
     <br>
 
+    <input type="text" name="text" id="text">
     <input id="Send" type="submit" value="Send">
 
     <script type="text/Javascript">
 
+        // Obtengo el input de tipo submit
+        const inpSubmit = document.getElementById("Send");
 
+        // Obtengo el input de tipo text
+        let inpText = document.getElementById("text");
+
+        let greet = function (inpText) {
+            
+            let h3 = element.createElement("h3");
+
+            h3.innerHTML = `Hello ${inpText}`;
+
+            body.appendChild(h3);
+
+        }
 
     </script>
 
