@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Key</title>
+</head>
+<body>
+
+    <h3>Events Key</h3>
+
+    <br>
+
+    <input type="text" name="text" id="txt" placeholder="Introduce your name...">
+
+    <input type="submit" value="Submit">
+
+
+    <script>
+
+        function printName(name) {
+
+            console.log(name);
+
+        }
+
+        // Obtengo el input de tipo submit
+        const submit = document.querySelector("#submit");
+
+        // Obtengo el input de tipo text
+        let txt = document.getElementById("txt");
+
+        // Cada vez que se pulse la tecla enter mostrara por consola el valor introducido
+        // en el input de tipo text
+        window.addEventListener("keydown", function() {
+            printName(txt.value);
+        });
+
+
+    </script>
+
+    
+</body>
+</html>
